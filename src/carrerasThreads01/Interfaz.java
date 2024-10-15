@@ -18,7 +18,7 @@ public class Interfaz extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
-	
+	// Corredores
 	static Corredor corredor1 = new Corredor("Gato1", 10);
 	static Corredor corredor2 = new Corredor("Gato2", 10);
 	static Corredor corredor3 = new Corredor("Gato3", 10);
@@ -67,25 +67,25 @@ public class Interfaz extends JFrame {
 		JLabel lbl_corredor1 = new JLabel("");
 		lbl_corredor1.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		lbl_corredor1.setBounds(10, 17, 100, 100);
-		lbl_corredor1.setIcon(new ImageIcon("C:\\Users\\Laura Sánchez\\eclipse-workspace\\carrerasThreads01\\src\\gato1.gif"));
+		lbl_corredor1.setIcon(new ImageIcon(Interfaz.class.getResource("gato1.gif")));
 		contentPane.add(lbl_corredor1);
 		
 		JLabel lbl_corredor2 = new JLabel("");
 		lbl_corredor2.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		lbl_corredor2.setBounds(10, 128, 100, 100);
-		lbl_corredor2.setIcon(new ImageIcon("C:\\Users\\Laura Sánchez\\eclipse-workspace\\carrerasThreads01\\src\\gato2.gif"));
+		lbl_corredor2.setIcon(new ImageIcon(Interfaz.class.getResource("gato2.gif")));
 		contentPane.add(lbl_corredor2);
 		
 		JLabel lbl_corredor3 = new JLabel("");
 		lbl_corredor3.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		lbl_corredor3.setBounds(10, 239, 100, 100);
-		lbl_corredor3.setIcon(new ImageIcon("C:\\Users\\Laura Sánchez\\eclipse-workspace\\carrerasThreads01\\src\\gato3.gif"));
+		lbl_corredor3.setIcon(new ImageIcon(Interfaz.class.getResource("gato3.gif")));
 		contentPane.add(lbl_corredor3);
 		
 		JLabel lbl_corredor4 = new JLabel("");
 		lbl_corredor4.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		lbl_corredor4.setBounds(10, 350, 100, 100);
-		lbl_corredor4.setIcon(new ImageIcon("C:\\Users\\Laura Sánchez\\eclipse-workspace\\carrerasThreads01\\src\\gato4.gif"));
+		lbl_corredor4.setIcon(new ImageIcon(Interfaz.class.getResource("gato4.gif")));
 		contentPane.add(lbl_corredor4);
 		
 		// Elementos restantes
