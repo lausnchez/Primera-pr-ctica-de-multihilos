@@ -1,18 +1,19 @@
 package carrerasThreads01;
 
+import java.awt.Frame;
 import java.util.Iterator;
 
 import javax.swing.JLabel;
 
 public class Corredor extends Thread{
 	private String nombre;
-	private int coordenada;
+	private JLabel etiqueta;
 
 	// Constructor -> Le damos un nombre y que herede los métodos de thread
-	public Corredor(String nombre, int coordenada) {
+	public Corredor(String nombre, JLabel etiqueta) {
 		super();
 		this.nombre = nombre;
-		this.coordenada = coordenada;
+		this.etiqueta = etiqueta;
 	}
 	
 	// Getters & Setters
@@ -24,28 +25,23 @@ public class Corredor extends Thread{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	public int getCoordenada() {
-		return coordenada;
-	}
 
 	public void setCoordenada(int coordenada) {
-		this.coordenada = coordenada;
 	}
 
 	// Método de correr
 	public void correr() {
+		Interfaz pantalla = new Interfaz();
 		
-		for(int i = 0; i < 10; i++) {
-			
-			// Instrucciones del thread
-			this.coordenada = coordenada+10;
-			
-			
-			System.out.println( nombre + ": " + i*1);
-			// Dormimos el hilo un tiempo aleatorio
+		while(etiqueta.getX()<800) {
 			try {
-				this.sleep((long)(Math.random() * 1000));
+			// Instrucciones del thread
+			this.sleep((long)(Math.random() * 1000));
+			this.etiqueta.setLocation(etiqueta.getX()+5, etiqueta.getY());
+
+			// Dormimos el hilo un tiempo aleatorio
+			
+				
 			} catch (InterruptedException e) {
 				// TODO: handle exception
 			}	
