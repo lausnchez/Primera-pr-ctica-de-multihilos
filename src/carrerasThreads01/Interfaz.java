@@ -14,6 +14,8 @@ import java.awt.Frame;
 
 import javax.swing.border.BevelBorder;
 import javax.swing.border.SoftBevelBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Interfaz extends JFrame {
 
@@ -38,7 +40,8 @@ public class Interfaz extends JFrame {
 		contentPane.setLayout(null);
 		
 		// Corredores
-		//------------------------------------------------------------------------------------------------------------------------
+		//----------------------------------------------------------------------------------------
+		
 		JLabel lbl_corredor1 = new JLabel("");
 		lbl_corredor1.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		lbl_corredor1.setBounds(10, 17, 100, 100);
@@ -72,6 +75,7 @@ public class Interfaz extends JFrame {
 		contentPane.add(meta);
 		
 		JButton btn_correr = new JButton("Empezar Carrera");
+		
 		btn_correr.setBounds(711, 521, 199, 43);
 		contentPane.add(btn_correr);
 		
@@ -86,10 +90,19 @@ public class Interfaz extends JFrame {
 		Corredor corredor3 = new Corredor("Gato3", lbl_corredor3);
 		Corredor corredor4 = new Corredor("Gato4", lbl_corredor4);
 		
-		corredor1.start();
-		corredor2.start();
-		corredor3.start();
-		corredor4.start();
+		
+		btn_correr.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lbl_corredor1.setLocation(10, 17);
+				lbl_corredor2.setLocation(10, 128);
+				lbl_corredor3.setLocation(10, 239);
+				lbl_corredor4.setLocation(10, 350);
+				corredor1.start();
+				corredor2.start();
+				corredor3.start();
+				corredor4.start();
+			}
+		});
 	}
 	
 	

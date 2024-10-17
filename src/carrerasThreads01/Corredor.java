@@ -30,14 +30,12 @@ public class Corredor extends Thread{
 	}
 
 	// Método de correr
-	public void correr() {
-		Interfaz pantalla = new Interfaz();
-		
-		while(etiqueta.getX()<800) {
+	public void correr() {		
+		while(etiqueta.getX() < 800) {
 			try {
 			// Instrucciones del thread
 			this.sleep((long)(Math.random() * 1000));
-			this.etiqueta.setLocation(etiqueta.getX()+5, etiqueta.getY());
+			this.etiqueta.setLocation(etiqueta.getX()+25, etiqueta.getY());
 
 			// Dormimos el hilo un tiempo aleatorio
 			
